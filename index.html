@@ -25,13 +25,13 @@
     // select the svg canvas
   //  var canvas = d3.select("svg");
 
-    //function rowProcessor(d) {
-   //     return {
-  //          "id": parseInt(d.id),
-   //         "type": parseInt(d.type),
-   //         "amount": parseInt(d.amount)
-  //      }
-  //  }
+    function rowProcessor(d) {
+       return {
+           "id": parseInt(d["Sensor ID"]),
+            //"type": parseInt(d.type),
+            //"amount": parseInt(d.amount)
+       }
+    }
 
     function dataProcessor(d){
 		for (var i = 0; i < d.length; i++){
@@ -40,7 +40,7 @@
         }
     }
     
-    d3.csv("Pedestrian_sensor_locations.csv", dataProcessor);
+    d3.csv("Pedestrian_sensor_locations.csv", dataProcessor,rowProcessor);
 
 </script>
 </body>
