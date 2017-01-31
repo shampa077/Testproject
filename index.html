@@ -27,7 +27,11 @@
 
     function rowProcessor(d) {
        return {
-           "sid": parseInt(d.Sensor_ID)
+           "sensorId": parseInt(d.Sensor_ID),
+		   "sensorName":d.Sensor_Name,
+		   "sensorDescription":d.Sensor_Description,
+		   "sensorStatus":d.Status
+		   //Upload_Date,Year_Installed,Location_Type,Geometry,Latitude,Longitude
             //"type": parseInt(d.type),
             //"amount": parseInt(d.amount)
        };
