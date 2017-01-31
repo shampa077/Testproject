@@ -1,4 +1,4 @@
-Sensor ID,Sensor Name,Sensor Description,Status,Upload Date,Year Installed,Location Type,Geometry,Latitude,Longitude
+Sensor_ID,Sensor_Name,Sensor_Description,Status,Upload_Date,Year_Installed,Location_Type,Geometry,Latitude,Longitude
 22,Eli274_T,Flinders St-Elizabeth St (East),Installed,19/08/2016 12:39:50 PM +0000,2013,Outdoor,"(-37.8178644478193, 144.965068228214)",-37.8178644478193,144.965068228214
 34,Fli32_T,Flinders St-Spark La,Installed,19/08/2016 12:39:50 PM +0000,2014,Outdoor,"(-37.8153798501116, 144.974150495806)",-37.8153798501116,144.974150495806
 11,WatCit_T,Waterfront City,Installed,19/08/2016 12:39:50 PM +0000,2009,Outdoor,"(-37.8154565643471, 144.939579299407)",-37.8154565643471,144.939579299407
