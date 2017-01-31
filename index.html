@@ -28,7 +28,6 @@
     function rowProcessor(d) {
        return {
            "sid": parseInt(d["Sensor ID");
-		   console.log(sid);
             //"type": parseInt(d.type),
             //"amount": parseInt(d.amount)
        }
@@ -40,6 +39,7 @@
 			console.log(d[i]);
         }
     }
+	
     
     d3.csv("Pedestrian_sensor_locations.csv", dataProcessor,rowProcessor);
 
