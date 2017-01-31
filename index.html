@@ -36,10 +36,31 @@
 		   "sensorLocationType":d.Location_Type,
 		   "sensorLatitude":parseFloat(d.Latitude),
 		   "sensorLongitude":parseFloat(d.Longitude)
-            //"type": parseInt(d.type),
-            //"amount": parseInt(d.amount)
        };
     }
+	function rowProcessor1(d) {
+       return {
+           "sensorId": parseInt(d.Sensor_ID),
+		   "sensorName":d.Sensor_Name,
+		   "sensorDescription":d.Sensor_Description,
+		   "sensorStatus":d.Status,
+		   "installYear":parseInt(d.Year_Installed),
+		   "sensorLocationType":d.Location_Type,
+		   "sensorLatitude":parseFloat(d.Latitude),
+		   "sensorLongitude":parseFloat(d.Longitude),
+		   "countHour":parseInt(d.Time),
+		   "countDay":parseInt(d.Mdate),
+		   "countMonth":d.Month,
+		   "countYear":parseInt(d.Year),
+           "count": parseInt(d.Hourly_Counts)
+       };
+    }
+	function getHour(d)
+	{
+		Date dat= new Date(d);
+		getHours();
+		return dat.getHours(); 
+	}
 
     function dataProcessor(d){
 		for (var i = 0; i < d.length; i++){
@@ -48,15 +69,16 @@
         }
     }
 	function dataProcessor1(d){
-		for (var i = 0; i < d.length; i++){
+		for (var i = 0; i < 500; i++){
 			console.log(i+"\n");
 			console.log(d[i]);
         }
     }
-    
+    d1<-read.csv("C:/Users/SM Abdullah/Documents/GitHub/Testproject/Pedestrian_sensor_locations.csv");
+	d2<-read.csv("C:/Users/SM Abdullah/Documents/GitHub/Testproject/Pedestrian_volume__updated_monthly_.csv");
     //d3.csv("Pedestrian_sensor_locations.csv", rowProcessor,dataProcessor);
 	//d3.csv("https://data.melbourne.vic.gov.au/api/views/ygaw-6rzq/rows.csv",dataProcessor1); //sesnor loc
-	d3.csv("https://data.melbourne.vic.gov.au/api/views/b2ak-trbp/rows.csv",dataProcessor1);//count
+	d3.csv("Pedestrian_volume__updated_monthly_.csv",rowProcessor1,dataProcessor1);//count
 </script>
 </body>
 </html>
