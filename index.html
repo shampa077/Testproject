@@ -27,11 +27,11 @@
 
     function rowProcessor(d) {
        return {
-           "sensorId": parseInt(d.Sensor_ID),
+           "sensorId": parseInt(d["Sensor ID"]),
 		   "sensorName":d.Sensor_Name,
 		   "sensorDescription":d.Sensor_Description,
 		   "sensorStatus":d.Status,
-		   "sensorInstalleDate": Date.parse(d.Upload_Date),
+		   "sensorInstalleDate": d.Upload_Date,
 		   "installYear":parseInt(d.Year_Installed),
 		   "sensorLocationType":d.Location_Type,
 		   "sensorLatitude":parseFloat(d.Latitude),
