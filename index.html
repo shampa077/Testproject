@@ -27,7 +27,8 @@
 
     function rowProcessor(d) {
        return {
-           "lat": parseInt(d.Latitude);
+           "sid": parseInt(d.Sensor_ID);
+		   console.log(sid);
             //"type": parseInt(d.type),
             //"amount": parseInt(d.amount)
        }
