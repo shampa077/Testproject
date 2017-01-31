@@ -47,9 +47,15 @@
 			console.log(d[i]);
         }
     }
-	
+	function dataProcessor1(d){
+		for (var i = 0; i < d.length; i++){
+			console.log(i+"\n");
+			console.log(d[i]);
+        }
+    }
     
     d3.csv("Pedestrian_sensor_locations.csv", rowProcessor,dataProcessor);
+	d3.csv("https://data.melbourne.vic.gov.au/api/views/ygaw-6rzq/rows.csv",dataProcessor1);
 
 </script>
 </body>
