@@ -34,10 +34,10 @@
   //  }
 
     function dataProcessor(d){
-	
-	
-	console.log(d);
-        
+		for (var i = 0; i < d.length; i++){
+			console.log(i+"\n");
+			console.log(d[i]);
+        }
     }
     
     d3.csv("Pedestrian_sensor_locations.csv", dataProcessor);
