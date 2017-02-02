@@ -56,6 +56,13 @@
        };
     }
 	
+	function rowProcessor2(d) {
+       return {
+           "sensorId": parseInt(d.Sensor_ID),
+		   "sensorName":d.Sensor_Name
+       };
+	
+    }
 
     function dataProcessor(d){
 		for (var i = 0; i < d.length; i++){
@@ -63,16 +70,20 @@
 			console.log(d[i]);
         }
     }
-	function dataProcessor1(d){
-		for (var i = 0; i < 500; i++){
-			console.log(i+"\n");
-			console.log(d[i]);
-        }
+	function dataProcessor1(error,d){
+	    console.log(d.length);
+		//for (var i = 0; i < 10; i++){
+			//console.log(i+"\n");
+			//console.log(d[i].sensorName);
+        //}
+		//console.log(d);
     }
     
-    //d3.csv("Pedestrian_sensor_locations.csv", rowProcessor,dataProcessor);
+    d3.csv("Pedestrian_sensor_locations.csv", rowProcessor,dataProcessor);
+	//d3.csv("Pedestrian_volume__updated_monthly_.csv", rowProcessor1,dataProcessor1);
 	//d3.csv("https://data.melbourne.vic.gov.au/api/views/ygaw-6rzq/rows.csv",dataProcessor1); //sesnor loc
-	d3.csv("TestProject/FinalTable.csv",rowProcessor1,dataProcessor1);//count
+	//d3.csv("FinalTable.csv",rowProcessor1,dataProcessor1);//count
+	d3.csv("FinalTable1.csv",rowProcessor2,dataProcessor1);
 </script>
 </body>
 </html>
