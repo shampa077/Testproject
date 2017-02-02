@@ -68,8 +68,17 @@
 		for (var i = 0; i < d.length; i++){
 			console.log(i+"\n");
 			console.log(d[i]);
+			var types =["Attraction","Dining","Entertainment","Housing","Library","Meeting","Office","Park","Shopping","Station","Street","University"];
+			for (var j = 0; i < types.length; j++)
+			{
+				if (d[i].Location_Type==types[j])
+			 	{
+				    console.log(j);
+			 	}
+			 }
         }
     }
+	
 	function dataProcessor1(error,d){
 	    console.log(d.length);
 		//for (var i = 0; i < 10; i++){
